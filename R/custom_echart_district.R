@@ -7,6 +7,9 @@
 #' @param district Character vector, list all the district want to be included in the map
 #'
 #' @return a json map ready to feed echarts4r::e_map_register()
+#' @importFrom geojsonio geojson_list
+#' @importFrom raster getData
+#'
 #' @export
 
 custom_echart_district <- function(country = "Vietnam", district) {
