@@ -9,12 +9,12 @@ get_cafeF(symbol, start_date, end_date)
 \arguments{
 \item{symbol}{the code of stock}
 
-\item{start_date}{the start date}
+\item{start_date}{the start date, in the form DD/MM/YYYY}
 
-\item{end_date}{the end date}
+\item{end_date}{the end date, in the form DD/MM/YYYY}
 }
 \value{
-a tibble contain all data of the stock in that period
+A tibble contain all stock data in that period
 }
 \description{
 Get stock data from cafef.vn

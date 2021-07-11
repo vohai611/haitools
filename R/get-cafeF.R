@@ -1,9 +1,9 @@
 #' Get stock data from cafef.vn
 #'
 #' @param symbol the code of stock
-#' @param start_date the start date
-#' @param end_date the end date
-#' @return a tibble contain all data of the stock in that period
+#' @param start_date the start date, in the form DD/MM/YYYY
+#' @param end_date the end date, in the form DD/MM/YYYY
+#' @return A tibble contain all stock data in that period
 #' @export
 #' @importFrom magrittr %>%
 #' @examples

@@ -1,15 +1,16 @@
-#' Get json map for echart4r on the town level
+#' Create Echart Map From GADM Map
 #'
-#' Create echart map from GADM map
+#' Get json map for echart4r on the town level
 #'
 #' @param country Choose the country, default is Vietnam
 #'
 #' @param town character vector, list all the town want to be included in the map
-#'
-#' @import purrr
+#' @return a json map ready to feed echarts4r::e_map_register()
 #' @importFrom geojsonio geojson_list
 #' @importFrom raster getData
+#' @import purrr
 #' @export
+
 custom_echart_town <- function(country = "Vietnam", town){
   ## create data
   if (!dir.exists("./data-GADM")) dir.create("./data-GADM")

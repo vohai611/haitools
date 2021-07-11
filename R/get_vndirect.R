@@ -1,15 +1,18 @@
 #' Get stock data from vndirect
+#'
 #' @param symbol the symbol of stock
-#' @param start_date the start date
-#' @param end_date the end_date
+#' @param start_date the start date, in the form DD/MM/YYYY
+#' @param end_date the end_date, in the form DD/MM/YYYY
+#' @return A tibble contain all stock data from that period
 #' @export
-#' @importFrom lubridate ymd
+#' @examples get_vndirect("VIC", '1/1/2015', '1/1/2017')
+#' @importFrom lubridate dmy
 
 
 get_vndirect <- function(symbol, start_date = NULL, end_date = NULL) {
 
-  if(is.null(start_date)) {start_date = lubridate::today() - 15} else start_date = lubridate::ymd(start_date)
-  if(is.null(end_date )) {end_date = lubridate::today()} else end_date = lubridate::ymd(end_date)
+  if(is.null(start_date)) {start_date = lubridate::today() - 15} else start_date = dmy(start_date)
+  if(is.null(end_date )) {end_date = lubridate::today()} else end_date = dmy(end_date)
   size <- as.double(end_date - start_date)
 
   url <- "https://finfo-api.vndirect.com.vn"
@@ -20,9 +23,11 @@ get_vndirect <- function(symbol, start_date = NULL, end_date = NULL) {
     httr::content(as = "text", encoding = "UTF-8") %>%
     jsonlite::fromJSON()
 
+  closeAllConnections()
+
   get_result$data %>%
     dplyr::as_tibble() %>%
-    dplyr::mutate(date = ymd(date)) %>%
+    dplyr::mutate(date = lubridate::ymd(date)) %>%
     return()
 }
 

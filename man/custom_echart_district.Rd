@@ -2,15 +2,18 @@
 % Please edit documentation in R/custom_echart_district.R
 \name{custom_echart_district}
 \alias{custom_echart_district}
-\title{Get json map for echart4r on the district level}
+\title{Create Echart Map From GADM Map}
 \usage{
 custom_echart_district(country = "Vietnam", district)
 }
 \arguments{
 \item{country}{Choose the country, default is Vietnam}
 
-\item{district}{character vector, list all the district want to be included in the map}
+\item{district}{Character vector, list all the district want to be included in the map}
+}
+\value{
+a json map ready to feed echarts4r::e_map_register()
 }
 \description{
-Create echart map from GADM map
+Get json map for echart4r on the district level
 }
