@@ -1,14 +1,14 @@
-#' Get json map for echart4r on the district level
+#' Create Echart Map From GADM Map
 #'
-#' Create echart map from GADM map
+#' Get json map for echart4r on the district level
 #'
 #' @param country Choose the country, default is Vietnam
 #'
 #' @param district character vector, list all the district want to be included in the map
-#'
-#' @import purrr
+#' @return a json map ready to feed echarts4r::e_map_register()
 #' @importFrom geojsonio geojson_list
 #' @importFrom raster getData
+#'
 #' @export
 custom_echart_district <- function(country = "Vietnam", district){
 

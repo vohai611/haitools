@@ -1,4 +1,5 @@
 #' Get stock data from vndirect
+#'
 #' @param symbol the symbol of stock
 #' @param start_date the start date
 #' @param end_date the end_date

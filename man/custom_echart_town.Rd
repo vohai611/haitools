@@ -2,7 +2,7 @@
 % Please edit documentation in R/custom_echart_town.R
 \name{custom_echart_town}
 \alias{custom_echart_town}
-\title{Get json map for echart4r on the town level}
+\title{Create Echart Map From GADM Map}
 \usage{
 custom_echart_town(country = "Vietnam", town)
 }
@@ -11,6 +11,9 @@ custom_echart_town(country = "Vietnam", town)
 
 \item{town}{character vector, list all the town want to be included in the map}
 }
+\value{
+a json map ready to feed echarts4r::e_map_register()
+}
 \description{
-Create echart map from GADM map
+Get json map for echart4r on the town level
 }
