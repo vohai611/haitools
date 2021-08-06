@@ -26,6 +26,7 @@ Imports:
     raster,
     geojsonio,
     purrr,
-    stringr
+    stringr,
+    stringi
 URL: https://github.com/vohai611/haitools
 BugReports: https://github.com/vohai611/haitools/issues
