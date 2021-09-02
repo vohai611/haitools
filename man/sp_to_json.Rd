@@ -4,17 +4,20 @@
 \alias{sp_to_json}
 \title{Transform sp to json}
 \usage{
-sp_to_json(sp = NULL, scope = NULL)
+sp_to_json(sp = NULL, scope = NULL, std_name = TRUE)
 }
 \arguments{
-\item{sp}{sp object}
+\item{sp}{Sp object. Might be downloaded from raster:getdata()}
 
-\item{scope}{the scope of map data: town or district. \cr
+\item{scope}{The scope of map data: town or district. \cr
 Eample of town: Ha Noi, Ha Tinh. \cr
 Example of district: Vinh, Hong Linh, Nghi Xuan}
+
+\item{std_name}{Should use standard name  or not \cr
+For example, "Hà Tĩnh" is non-standard name, while "Ha Tinh" is standard name}
 }
 \value{
-a json map ready to feed echarts4r::e_map_register()
+A json map ready to feed echarts4r::e_map_register()
 }
 \description{
 Get json map for echart4r from sp data download from GADM (raster)
