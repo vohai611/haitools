@@ -18,4 +18,5 @@ Remove Vietnamese accent
 \examples{
 accent_remove('tôi muốn ăn cơm')
 
+
 }

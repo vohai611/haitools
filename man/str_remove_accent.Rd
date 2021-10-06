@@ -2,7 +2,7 @@
 % Please edit documentation in R/str_remove_accent.R
 \name{str_remove_accent}
 \alias{str_remove_accent}
-\title{Remove accent ingeneral}
+\title{Remove accent in general}
 \usage{
 str_remove_accent(str)
 }
@@ -16,6 +16,7 @@ String vector
 Wrap around stringi
 }
 \examples{
+library(stringr)
 str_remove_accent('tôi muốn ăn cơm')
 
 }

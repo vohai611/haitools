@@ -1,10 +1,11 @@
 #' Remove Vietnamese accent
-#'
+#' @importFrom magrittr %>%
 #' @param str String or vector of string you want to remove accent
 #'
 #' @return String vector
 #'
 #' @examples accent_remove('tôi muốn ăn cơm')
+#'
 #'
 #' @export
 

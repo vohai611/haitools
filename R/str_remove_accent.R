@@ -1,11 +1,13 @@
-#' Remove accent ingeneral
+#' Remove accent in general
 #'
 #' Wrap around stringi
 #' @param str String or vector of string you want to remove accent
 #'
 #' @return String vector
 #'
-#' @examples str_remove_accent('tôi muốn ăn cơm')
+#' @examples
+#' library(stringr)
+#' str_remove_accent('tôi muốn ăn cơm')
 #'
 #' @export
 
