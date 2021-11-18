@@ -21,3 +21,29 @@ top_hilo = function(x, n = 10) {
   z[which(x %in% bot)] = -1L
   z
 }
+
+
+#' Recode vector using multiple pattern/ replacement
+#' @param x character vector input
+#' @param pattern vector of pattern to replace
+#' @param replace vector of value to replace the corresponding pattern above
+
+#' @return character vector
+#' @examples
+#' data = sample(letters, 20, replace = TRUE)
+#' recode_with(data, c('a','b','c'), c(1,2,3))
+#' @export
+
+
+recode_with = function(x, pattern, replace){
+  stopifnot(length(pattern) == length(replace))
+
+  y = replace
+  names(y) = pattern
+
+  changed = y[x]
+
+  # preserve the remaining value (no match value)
+  changed[is.na(changed)] = x[is.na(changed)]
+  unname(changed)
+}
